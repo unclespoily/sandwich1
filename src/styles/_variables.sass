@@ -1,0 +1,95 @@
+// Cold colors
+$aqua: #7fdbff
+$blue: #0074d9
+$navy: #001f3f
+$teal: #39cccc
+$green: #2ecc40
+$olive: #3d9970
+$lime: #01ff70
+
+// Warm colors
+$yellow: #ffdc00
+$orange: #ff851b
+$red: #ff4136
+$fuchsia: #f012be
+$purple: #b10dc9
+$maroon: #85144b
+
+// Grayscale
+$white: #ffffff
+$silver: #dddddd
+$gray: #aaaaaa
+$black: #111111
+
+$main-background-color: $white
+$main-text-color: $black
+$divider-color: rgba($black, .14)
+
+$main-text-size: 14px
+$main-border-radius: 6px
+
+$small-space: 16px
+$medium-space: 32px
+$large-space: 64px
+
+$phone-size: 600px
+$tablet-size: 992px
+$desktop-size: 1200px
+
+// Variables
+$primary-color: #f0f0f0
+$hover-color: darken($primary-color, 10%)
+$navigation-padding: 0 20px
+$navigation-height: 60px // Adjust based on your design
+$menu-background-color: $primary-color
+$hamburger-line-width: 40px
+$hamburger-line-height: 5px
+$hamburger-line-spacing: 5px
+$hamburger-line-color: #333 // Dark color for contrast
+$link-color: #007bff // Bootstrap-like link color for reference
+$link-hover-color: darken($link-color, 15%)
+
+.navigation
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
+  padding: $navigation-padding
+  background-color: $primary-color
+
+.hamburger
+  cursor: pointer
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  height: 40px
+  > div
+    width: $hamburger-line-width
+    height: $hamburger-line-height
+    background-color: $hamburger-line-color
+    transition: all 0.3s ease
+  &:hover
+    > div
+      background-color: darken($hamburger-line-color, 10%)
+
+.menu
+  display: none
+  flex-direction: column
+  align-items: flex-start
+  background-color: $menu-background-color
+  padding: 20px
+  position: absolute
+  top: $navigation-height
+  left: 0
+  right: 0
+  &.open
+    display: flex
+
+.menu-item
+  text-decoration: none
+  color: $link-color
+  padding: 10px 0
+  &:hover
+    color: $link-hover-color
+
+// Responsive adjustments or additional styles can be added below
